@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-
+import Info from "./metrics/Info";
+import Tags from "./metrics/Tags";
 class Results extends Component {
     render() {
         return (
             <div className="container">
-                <div id="tags" className="row">
-                    <div className="col">
-                        <div className="p-3 border bg-light">Custom column padding</div>
-                    </div>
-                    <div className="col">
-                        <div className="p-3 border bg-light">Custom column padding</div>
-                    </div>
+                <div className="d-flex flex-wrap justify-content-around">
+                    <Tags tags={this.props.tags}/>
+                    <Info title={this.props.title} channelTitle={this.props.channelTitle} views={this.props.views}/>
                 </div>
             </div>
         )
